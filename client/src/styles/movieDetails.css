@@ -1,0 +1,75 @@
+.poster{
+    width:100%;
+    height: 550px;
+}
+
+.actionbtn{
+    width: 100%;
+    height:50px;
+    margin: 5px 5px 10px 5px;
+}
+
+.txtArea{
+    width:100%;
+}
+
+.ratingClass{
+    margin-top: 5px;
+    margin-bottom: 100px;
+}
+
+
+.txtArea{
+        height:60px;
+        width:100%;
+    }
+
+.addCommentBtn{
+    margin: -60px auto ;
+    position:relative;
+    top:50%;
+    }
+
+.rateOut{
+    margin: 5px 5px 10px 5px;
+    float: left;
+    height:60px
+}
+.txtRate{
+    float: left;
+    width: 200px;
+}
+
+#ratingMessage{
+    color:red;
+    margin-bottom: 50px;
+}
+
+#updateMessage{
+    color:red;
+}
+.divBtn{
+    height:100%;
+}
+
+.ratingTable{
+    width: 60%;
+}
+.ratingTableFont{
+    font-size: 20px;
+}
+
+
+.row-bottom-margin { height:60px }
+
+.md{
+
+    color: darkslategray;
+    background-color: darksalmon;
+    padding:15px;
+    margin: 20px 20px  20px 20px ;
+}
+
+
+
+

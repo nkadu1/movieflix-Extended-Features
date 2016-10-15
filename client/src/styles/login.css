@@ -1,0 +1,94 @@
+.loginh1{
+    color:darkslategrey;
+    margin-bottom: 50px;
+}
+
+.loginBox{
+    position: absolute;
+    background-color: lightgray;
+    width:500px;
+    height:350px;
+    margin: 160px auto auto auto;
+    margin-left: 300px;
+    opacity: 0.8;
+}
+
+
+.loginBoxSignup{
+    position: absolute;
+    background-color: lightgray;
+    width:500px;
+    height:465px;
+    margin: 100px auto auto auto;
+    margin-left: 300px;
+    opacity: 0.8;
+}
+
+.form-control-login{
+    margin: 30px auto auto auto;
+    border:2px solid cornflowerblue;
+    width:60%;
+    height:50px;
+    border-radius: 7px;
+    font-size: large;
+    opacity: 1;
+    position: relative;
+}
+
+#backgroundImage{z-index: 1;
+    background-repeat: repeat-y;}
+
+#backgroundImage:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(../images/movie.jpg);
+    background-repeat: repeat-y;
+    background-size: contain;
+    opacity: 0.4;
+    filter:alpha(opacity=40);
+    height:100%;
+    width:100%;
+}
+
+#h4login{
+    text-align: center;
+    position:relative;
+    margin-top: 20px;
+}
+
+#space{
+    visibility: hidden;
+    height: 20px;
+}
+
+.btnLoogged{
+    margin-top:10px;
+    margin-right: 20px;
+    opacity: 1;
+    width:100px;
+}
+
+.btn{
+    color:white;
+    background-color: brown;
+}
+
+.error {
+    color: darkred;
+    position: relative;
+    margin-left: 100px;
+}
+
+#errorMessage{
+    color: darkred;
+}
+
+.welcome{
+    color: brown;
+    margin: 200px auto auto 250px;
+}

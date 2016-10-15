@@ -1,0 +1,78 @@
+<body>
+<h1>
+    MovieDetails
+</h1>
+<videogular vg-theme="movieVm.config.theme">
+    <vg-media vg-src="movieVm.geturl()"
+              <!--vg-tracks="movieVm.config.tracks">-->
+    </vg-media>
+
+    <vg-controls>
+        <vg-play-pause-button></vg-play-pause-button>
+        <vg-time-display>{{ currentTime | date:'mm:ss' }}</vg-time-display>
+        <vg-scrub-bar>
+            <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+        </vg-scrub-bar>
+        <vg-time-display>{{ timeLeft | date:'mm:ss' }}</vg-time-display>
+        <vg-volume>
+            <vg-mute-button></vg-mute-button>
+            <vg-volume-bar></vg-volume-bar>
+        </vg-volume>
+        <vg-fullscreen-button></vg-fullscreen-button>
+    </vg-controls>
+
+    <vg-overlay-play></vg-overlay-play>
+    <vg-poster vg-url='movieVm.config.plugins.poster'></vg-poster>
+</videogular>
+
+
+<div class="row">
+
+    <div class="col-md-12 md">
+        <p><strong>Title</strong>:{{movieVm.movie.name}}</p>
+        <p><strong>Description</strong>:{{movieVm.movie.description}}</p>
+    </div>
+
+</div>
+
+    <h3>
+        Add Rating
+    </h3>
+<div class="container-fluid">
+    <form name="movieVm.reviewForm" ng-submit="movieVm.addRating(movieVm.movie.movieId,movieVm.reviewForm)">
+        <div class="row row-bottom-margin">
+            <div class="rateOut">
+                <div class="col-md-4 form-group ">
+                    <label class="txtRate"><strong>How much would you rate this video out of 5 : </strong></label>
+                </div>
+                <div class="col-md-4 form-group ">
+                    <input type="text" id="rating" class="form-control" ng-model="movieVm.newRating.rating">
+                </div>
+                <div class="ratingClass">
+                    <div class="col-md-4">
+                        <div style="width:100%; height:100%">
+                            <button type="submit" class="btn btn-primary addCommentBtn">Submit Rating</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+    <h3>
+        Previous ratings and comments
+    </h3>
+    <table class="table table-striped ratingTable">
+        <tbody>
+            <tr>
+                <td class="ratingTableFont"><strong>{{movieVm.movie.ratings.toString()}}
+                </strong></td>
+            </tr>
+        </tbody>
+    </table>
+<div >
+    <label id="ratingMessage"><strong>{{movieVm.submitMessage}}</strong></label>
+</div>
+</div>
+</body>

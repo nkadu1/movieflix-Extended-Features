@@ -1,0 +1,81 @@
+<div class="container">
+    <div class="header">
+        <ul class="nav nav-pills pull-right brown">
+            <li class="navElements active" role="presentation"><a class="navElements" href="">Home</a></li>
+             <li class="navElements" role="presentation" class="dropdown" uib-dropdown>
+                <a class="dropdown-toggle navElements" uib-dropdown-toggle href="#" role="button" >
+                My Profile<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu filter" uib-dropdown-menu>
+                    <!--<li><a ng-href="#/update-user/{{movieListVm.userId}}">Update profile</a></li>-->
+                    <li><a ng-click="movieListVm.logout()">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="filterHeader">
+                <input class="form-control txtsearch filter" placeholder="search by title" ng-model="movieListVm.searchText" type="text" />
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<div class="container">
+    <div class="row" >
+        <div infinite-scroll="movieListVm.getTitles()" infinite-scroll-distance="0">
+        <div class="col-md-4" ng-repeat="movie in movieListVm.titles| filter:movieListVm.searchText | orderBy:movieListVm.sorter.sortBy:movieListVm.sorter.sortOrder">
+
+
+            <div class="customDiv style_prevu_kit">
+                    <div>
+<div class="video-container-custom">
+                            <videogular vg-player-ready="movieListVm.onPlayerReady($API, $index)" vg-update-state="movieListVm.onUpdateState($state, $index)">
+                                <!--vg-theme="movieListVm.config.theme"-->
+                                <vg-media vg-src="movieListVm.getUrl(movie.url)"
+                                          <!--vg-tracks="movieListVm.config.tracks">-->
+                                </vg-media>
+                                <vg-controls>
+                                    <vg-play-pause-button></vg-play-pause-button>
+                                    <vg-time-display>{{ currentTime | date:'mm:ss' }}</vg-time-display>
+                                    <vg-scrub-bar>
+                                        <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                                    </vg-scrub-bar>
+                                    <vg-time-display>{{ timeLeft | date:'mm:ss' }}</vg-time-display>
+                                    <vg-volume>
+                                        <vg-mute-button></vg-mute-button>
+                                        <vg-volume-bar></vg-volume-bar>
+                                    </vg-volume>
+                                    <vg-fullscreen-button></vg-fullscreen-button>
+                                </vg-controls>
+
+                                <vg-overlay-play class="playbtn"></vg-overlay-play>
+                                <!--<vg-poster vg-url='movieListVm.config.plugins.poster'></vg-poster>-->
+                            </videogular>
+                        </div>
+                        <div>
+
+                        </div>
+                        <!--<div>-->
+                            <!--<a class="navElements" href="#/movies/movieDetails/{{movie._id}}"> <img class="posterMovie" ng-src=""></a>-->
+                        <!--</div>-->
+                    <label><a href="#/movies/movieDetails/{{movie._id}}">{{movie.name}}</a></label>
+
+                </div>
+
+
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+
