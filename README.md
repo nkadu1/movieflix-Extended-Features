@@ -1,5 +1,5 @@
 
-This is an new version of movieflix which I previously developed
+This is a new version of movieflix which I previously developed
 
 Added features:
 
