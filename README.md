@@ -4,17 +4,23 @@ This is a new version of movieflix which I previously developed
 Added features:
 
 -Improved Authentication
+</br>
 -Added videos and video player directives
+</br>
 -Added Testing
+</br>
 Project Implementation:
-
-I used AngularJs for development alongwith gulp and bower.
+</br>
+Used AngularJs for development alongwith gulp and bower.
+</br>
 Design Pratices:
-
-I used design practices and styleguides by John Papa.
+</br>
+Used design practices and styleguides by John Papa.
+</br>
 Status:
-
-I implemented all the functional requirements as specified.
+</br>
+Implemented all the functional requirements as specified.
+</br>
 To run the server:
 
 npm start
